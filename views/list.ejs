@@ -1,0 +1,34 @@
+<%- include("header")-%>
+<section class="vh-100" style="background-color: #3da2c3;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <div class="card-body p-4">
+            <div class="heading">
+<h2><%= ListDay %></h2>
+            </div>
+<div class="box">
+                    <%  for(var i=0;i<ListItem.length;i++){ %>
+                  <div class="item flex-column">
+                      <div class="item d-flex">
+                    <input type="checkbox" name="" value="">
+                      <p><%= ListItem[i] %></p>
+                      </div>
+                  </div>
+                <%  }   %>
+</div>
+<div class="d-flex justify-content-center">
+            <form  action="/" method="post">
+
+              <input type="text" name="newitem" value="" class="inputwork" placeholder="New Item" autocomplete="off">
+              <button  type="submit" name="list" value="<%= ListDay %>">+</button>
+            </form>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include("footer")-%>
